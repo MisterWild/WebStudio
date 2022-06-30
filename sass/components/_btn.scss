@@ -1,0 +1,31 @@
+.button {
+  @include fonts(16px, 700, 1.88, 0.06em);
+  font-family: inherit;
+  min-width: 200px;
+  height: 50px;
+  border: none;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  /* border: none; */
+
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-white);
+  background-color: var(--accent-color);
+
+  padding: 10px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: color var(--transition), background-color var(--transition),
+    border-shadow var(--transition);
+
+  &:hover,
+  &button:focus {
+    background-color: #188ce8;
+    color: var(--main-white);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

@@ -1,0 +1,79 @@
+.hero {
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #2f303a;
+  width: 100%;
+  height: auto;
+  padding: 118px 0;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 767px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/adaptive/mob/mob-herobackgroundimg.jpg');
+    @include mq(retina) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/adaptive/mob/mob-herobackgroundimg@2x.jpg');
+    }
+  }
+
+  @include mq(tab) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/adaptive/tab/tab-herobackgroundimg.jpg');
+    @include mq(retina) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/adaptive/tab/tab-herobackgroundimg@2x.jpg');
+    }
+  }
+  @include mq(desc) {
+    padding: 200px 0;
+    max-width: 1600px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/adaptive/desk/desk-herobackgroundimg.jpg');
+    @include mq(retina) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/adaptive/desk/desk-herobackgroundimg@2x.jpg');
+    }
+  }
+}
+.hero__title {
+  justify-content: center;
+  text-transform: uppercase;
+  color: var(--main-white);
+  text-transform: uppercase;
+  margin: 0 auto 30px;
+  max-width: 360px;
+  @include mq(mob-only) {
+    @include fonts(26px, 900, 1.62, 0.06em);
+  }
+
+  @include mq(desc) {
+    @include fonts(44px, 900, 1.4, 0.06em);
+    max-width: 696px;
+  }
+}

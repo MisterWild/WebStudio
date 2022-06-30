@@ -1,0 +1,83 @@
+.contacts {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  flex-direction: column;
+
+  @include mq(mob-only) {
+    margin-bottom: 64px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  @include mq(tab) {
+    align-items: flex-start;
+  }
+  @include mq(desc) {
+    flex-direction: row;
+  }
+}
+.contacts__icon {
+  fill: currentColor;
+  margin-right: 10px;
+  align-items: center;
+  @include mq(mob-only) {
+    display: none;
+  }
+}
+
+.contacts__info {
+  display: flex;
+  align-items: center;
+
+  @include fonts(26px, 500, 1.17, 0.02em);
+  color: var(--main-color);
+  transition: color var(--transition);
+
+  @media screen and (max-width: 479px) {
+    @include fonts(24px, 500, 1.17, 0.02em);
+  }
+  @include mq(mob) {
+    @include fonts(34px, 500, 1.17, 0.02em);
+  }
+  @include mq(mob-only) {
+    color: var(--accent-color);
+  }
+
+  @include mq(tab) {
+    @include fonts(12px, 500, 1.16, 0.02em);
+  }
+  @include mq(desc) {
+    @include fonts(14px, 500, 1.14, 0.02em);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    align-items: center;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.mail {
+  @media screen and (max-width: 479px) {
+    @include fonts(18px, 500, 1.17, 0.02em);
+  }
+  @include mq(mob-only) {
+    @include fonts(24px, 500, 1.16, 0.02em);
+    color: #757575;
+  }
+  @include mq(tab-only) {
+    padding-top: 21px;
+  }
+}
+.tel {
+  @include mq(tab-only) {
+    padding-bottom: 21px;
+  }
+  // @include mq(desc) {
+  //   align-items: baseline;
+  // }
+}

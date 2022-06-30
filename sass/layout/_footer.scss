@@ -1,0 +1,121 @@
+.footer {
+  background-color: var(--footer-color);
+  padding: 60px 0;
+}
+
+.footer__container {
+  display: block;
+
+  @include mq(desc) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+.address {
+  @include fonts(null, 500, null, null);
+  font-style: inherit;
+  margin-top: 20px;
+  // text-align: center;
+
+  color: var(--main-white);
+
+  @include mq(mob-only) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.address__link {
+  @include fonts(null, 400, 1.71, null);
+  display: block;
+  margin-top: 9px;
+  color: var(--footer-contacts);
+
+  transition: color var(--transition);
+}
+
+.footer-item-wrapper {
+  @include mq(tab) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  @include mq(desc) {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    margin-bottom: 0;
+  }
+}
+
+.footer-item {
+  text-align: center;
+  width: 100%;
+  @include mq(tab) {
+    --card-item: 2;
+    // width: calc(100% / 2);
+  }
+  @include mq(desc) {
+    text-align: left;
+    &--right {
+      margin-left: 70px;
+      width: 235px;
+    }
+  }
+}
+
+.footer-item__title {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  @include mq(mob-only) {
+    margin-top: 60px;
+  }
+  @include mq(tab) {
+    margin-bottom: 20px;
+  }
+}
+
+.footer__icon {
+  fill: var(--main-white);
+}
+
+.footer-item__list {
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  @include mq(mob-only) {
+    margin-top: 20px;
+  }
+  @include mq(desc) {
+    justify-content: flex-start;
+  }
+}
+
+.footer-item__soc {
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer__link {
+  display: flex;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  transition: background-color var(--transition);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    fill: var(--main-white);
+  }
+}
